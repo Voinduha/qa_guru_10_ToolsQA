@@ -23,7 +23,6 @@ public class DemoQATest {
         String userEmail = "ya@ya.ru";
         String gender = "Male";
         String userNumber = "1234567890";
-        String dateOfBirth = "11 May,2000";
         String subject = "Physics";
         String hobbySport = "Sports";
         String hobbyMusic = "Music";
@@ -43,10 +42,10 @@ public class DemoQATest {
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("May");
         $(".react-datepicker__year-select").selectOption("2000");
-        $$(".react-datepicker__day").find(text("11")).click();
+        $x("//div[contains(text(),'11')]").click();
+
 
         $("#subjectsInput").setValue(subject).pressEnter();
-
 
         $(byText(hobbySport)).click();
         $(byText(hobbyMusic)).click();
