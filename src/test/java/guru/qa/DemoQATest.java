@@ -44,18 +44,13 @@ public class DemoQATest {
         $(".react-datepicker__year-select").selectOption("2000");
         $x("//div[contains(text(),'11')]").click();
 
-
         $("#subjectsInput").setValue(subject).pressEnter();
-
         $(byText(hobbySport)).click();
         $(byText(hobbyMusic)).click();
-
         $("#uploadPicture").uploadFromClasspath(uploadPicture);
         $("#currentAddress").setValue(currentAddress);
-
         $("#react-select-3-input").setValue(state).pressEnter();
         $("#react-select-4-input").setValue(city).pressEnter();
-
         $("#submit").click();
 
         //Проверяем что перешли в модальное окно
