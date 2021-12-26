@@ -18,18 +18,19 @@ public class DemoQATest {
     @Test
     public void fillForm() {
 
-        String firstName = "Serg";
-        String lastName = "Me";
-        String userEmail = "ya@ya.ru";
-        String gender = "Male";
-        String userNumber = "1234567890";
-        String subject = "Physics";
-        String hobbySport = "Sports";
-        String hobbyMusic = "Music";
-        String uploadPicture = "Test.jpeg";
-        String currentAddress = "Somewhere";
-        String state = "NCR";
-        String city = "Noida";
+        String
+        firstName = "Sergey",
+        lastName = "Me",
+        userEmail = "ya@ya.ru",
+        gender = "Male",
+        userNumber = "1234567890",
+        subject = "Physics",
+        hobbySport = "Sports",
+        hobbyMusic = "Music",
+        uploadPicture = "Test.jpeg",
+        currentAddress = "Somewhere",
+        state = "NCR",
+        city = "Noida";
 
         open("https://demoqa.com/automation-practice-form");
 
@@ -58,7 +59,7 @@ public class DemoQATest {
 
         //Проверяем введенные данные
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $(".table tbody").shouldHave(text("Serg Me"),
+        $(".table tbody").shouldHave(text("Sergey Me"),
                         text("ya@ya.ru"),
                         text("Male"),
                         text("1234567890"),
