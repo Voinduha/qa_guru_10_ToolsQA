@@ -58,8 +58,7 @@ public class DemoQATest {
 
         //Проверяем введенные данные
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-        $("[class=\"table table-dark table-striped table-bordered table-hover\"]").$("tbody")
-                .shouldHave(text("Serg Me"),
+        $(".table tbody").shouldHave(text("Serg Me"),
                         text("ya@ya.ru"),
                         text("Male"),
                         text("1234567890"),
