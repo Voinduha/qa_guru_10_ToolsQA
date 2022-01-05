@@ -23,7 +23,6 @@ public class DemoQATestWithDsl extends TestBase {
                 state = "NCR",
                 city = "Noida";
 
-
         registrationPage
                 .openPage()
                 .typeFirstName(firstName)
@@ -39,7 +38,6 @@ public class DemoQATestWithDsl extends TestBase {
                 .typeCity(city);
         registrationPage.calendar.setDate(11, "May", "2000");
 
-        String year;
         registrationPage.clickSubmit()
                 .checkResultsValue(firstName + " " + lastName);
     }

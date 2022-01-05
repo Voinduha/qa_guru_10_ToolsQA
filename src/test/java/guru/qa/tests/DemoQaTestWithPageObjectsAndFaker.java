@@ -1,25 +1,27 @@
 package guru.qa.tests;
 
+import com.github.javafaker.Faker;
 import guru.qa.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
 
-public class DemoQaTestWithPageObjects extends TestBase {
+public class DemoQaTestWithPageObjectsAndFaker extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
+    Faker faker = new Faker();
 
     @Test
     public void fillForm() {
 
         String
-                firstName = "Sergey",
-                lastName = "Me",
-                userEmail = "ya@ya.ru",
+                firstName = faker.name().firstName(),
+                lastName = faker.name().lastName(),
+                userEmail = faker.internet().emailAddress(),
                 gender = "Male",
-                userNumber = "1234567890",
+                userNumber = faker.phoneNumber().subscriberNumber(10),
                 subject = "Physics",
                 hobbySport = "Sports",
                 uploadPicture = "Test.jpeg",
-                currentAddress = "Somewhere",
+                currentAddress = faker.address().fullAddress(),
                 state = "NCR",
                 city = "Noida";
 
@@ -36,6 +38,7 @@ public class DemoQaTestWithPageObjects extends TestBase {
         registrationPage.typeCurrentAddress(currentAddress);
         registrationPage.typeState(state);
         registrationPage.typeCity(city);
+        registrationPage.clickSubmit();
         registrationPage.checkResultsValue(firstName + " " + lastName);
     }
 }
