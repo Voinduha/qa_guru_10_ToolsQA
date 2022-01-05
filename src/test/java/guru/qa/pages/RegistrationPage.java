@@ -22,7 +22,7 @@ public class RegistrationPage {
                     stateInput = $("#react-select-3-input"),
                     cityInput = $("#react-select-4-input"),
                     submitButton = $("#submit"),
-                    resultsTable = $(".table tbody");
+                    resultsTable = $(".table-responsive");
 
     public CalendarComponent calendar = new CalendarComponent();
 

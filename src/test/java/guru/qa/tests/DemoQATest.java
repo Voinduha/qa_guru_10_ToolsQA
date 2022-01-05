@@ -1,35 +1,28 @@
 package guru.qa.tests;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class DemoQATest {
-
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.startMaximized = true;
-    }
+public class DemoQATest extends TestBase {
 
     @Test
     public void fillForm() {
 
         String
-        firstName = "Sergey",
-        lastName = "Me",
-        userEmail = "ya@ya.ru",
-        gender = "Male",
-        userNumber = "1234567890",
-        subject = "Physics",
-        hobbySport = "Sports",
-        uploadPicture = "Test.jpeg",
-        currentAddress = "Somewhere",
-        state = "NCR",
-        city = "Noida";
+                firstName = "Sergey",
+                lastName = "Me",
+                userEmail = "ya@ya.ru",
+                gender = "Male",
+                userNumber = "1234567890",
+                subject = "Physics",
+                hobbySport = "Sports",
+                uploadPicture = "Test.jpeg",
+                currentAddress = "Somewhere",
+                state = "NCR",
+                city = "Noida";
 
         open("https://demoqa.com/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
@@ -53,14 +46,14 @@ public class DemoQATest {
 
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
         $(".table tbody").shouldHave(text("Sergey Me"),
-                        text("ya@ya.ru"),
-                        text("Male"),
-                        text("1234567890"),
-                        text("11 May,2000"),
-                        text("Sport"),
-                        text("Test.jpeg"),
-                        text("Somewhere"),
-                        text("NCR Noida"));
+                text("ya@ya.ru"),
+                text("Male"),
+                text("1234567890"),
+                text("11 May,2000"),
+                text("Sport"),
+                text("Test.jpeg"),
+                text("Somewhere"),
+                text("NCR Noida"));
     }
 }
 

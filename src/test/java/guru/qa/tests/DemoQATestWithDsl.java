@@ -1,20 +1,11 @@
 package guru.qa.tests;
 
-import com.codeborne.selenide.Configuration;
 import guru.qa.pages.RegistrationPage;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class DemoQATestWithDsl {
+public class DemoQATestWithDsl extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
-    private String month;
-    private String year;
-    private String day;
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.startMaximized = true;
-    }
 
     @Test
     public void fillForm() {
