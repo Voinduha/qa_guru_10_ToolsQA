@@ -50,7 +50,6 @@ public class DemoQaTestWithPageObjectsAndFaker extends TestBase {
         registrationPage.checkResultsValue(currentAddress);
         registrationPage.checkResultsValue(state);
         registrationPage.checkResultsValue(city);
-
     }
 }
 
