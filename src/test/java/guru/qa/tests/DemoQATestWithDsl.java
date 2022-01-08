@@ -35,11 +35,11 @@ public class DemoQATestWithDsl extends TestBase {
                 .uploadPicture(uploadPicture)
                 .typeCurrentAddress(currentAddress)
                 .typeState(state)
-                .typeCity(city);
-        registrationPage.calendar.setDate(11, "May", "2000");
-        registrationPage.clickSubmit();
+                .typeCity(city)
+        .calendar.setDate(11, "May", "2000");
+        registrationPage.clickSubmit()
 
-                registrationPage.checkResultsValue(firstName)
+                .checkResultsValue(firstName)
                 .checkResultsValue(lastName)
                 .checkResultsValue(userEmail)
                 .checkResultsValue(gender)

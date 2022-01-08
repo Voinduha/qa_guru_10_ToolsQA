@@ -25,31 +25,34 @@ public class DemoQaTestWithPageObjectsAndFaker extends TestBase {
                 state = "NCR",
                 city = "Noida";
 
-        registrationPage.openPage();
-        registrationPage.typeFirstName(firstName);
-        registrationPage.typeLastName(lastName);
-        registrationPage.typeEmail(userEmail);
-        registrationPage.typeGender(gender);
-        registrationPage.typeUserNumber(userNumber);
-        registrationPage.calendar.setDate(11, "May", "2000");
-        registrationPage.typeSubject(subject);
-        registrationPage.typeHobbySport(hobbySport);
-        registrationPage.uploadPicture(uploadPicture);
-        registrationPage.typeCurrentAddress(currentAddress);
-        registrationPage.typeState(state);
-        registrationPage.typeCity(city);
-        registrationPage.clickSubmit();
-        registrationPage.checkResultsValue(firstName + " " + lastName);
-        registrationPage.checkResultsValue(userEmail);
-        registrationPage.checkResultsValue(gender);
-        registrationPage.checkResultsValue(userNumber);
-        registrationPage.checkResultsValue("11 May, 2000");
-        registrationPage.checkResultsValue(subject);
-        registrationPage.checkResultsValue(hobbySport);
-        registrationPage.checkResultsValue(uploadPicture);
-        registrationPage.checkResultsValue(currentAddress);
-        registrationPage.checkResultsValue(state);
-        registrationPage.checkResultsValue(city);
+        registrationPage
+        .openPage()
+        .typeFirstName(firstName)
+        .typeLastName(lastName)
+        .typeEmail(userEmail)
+        .typeGender(gender)
+        .typeUserNumber(userNumber)
+        .calendar.setDate(11, "May", "2000");
+        registrationPage
+        .typeSubject(subject)
+        .typeHobbySport(hobbySport)
+        .uploadPicture(uploadPicture)
+        .typeCurrentAddress(currentAddress)
+        .typeState(state)
+        .typeCity(city)
+        .clickSubmit()
+
+        .checkResultsValue(firstName + " " + lastName)
+        .checkResultsValue(userEmail)
+        .checkResultsValue(gender)
+        .checkResultsValue(userNumber)
+        .checkResultsValue("11 May, 2000")
+        .checkResultsValue(subject)
+        .checkResultsValue(hobbySport)
+        .checkResultsValue(uploadPicture)
+        .checkResultsValue(currentAddress)
+        .checkResultsValue(state)
+        .checkResultsValue(city);
     }
 }
 
