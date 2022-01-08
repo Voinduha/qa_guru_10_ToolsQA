@@ -38,7 +38,7 @@ public class DemoQATestWithDsl extends TestBase {
                 .typeCity(city)
         .calendar.setDate(11, "May", "2000");
         registrationPage.clickSubmit()
-
+                // проверки
                 .checkResultsValue(firstName)
                 .checkResultsValue(lastName)
                 .checkResultsValue(userEmail)
