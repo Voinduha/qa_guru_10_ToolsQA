@@ -41,7 +41,7 @@ public class DemoQaTestWithPageObjectsAndFaker extends TestBase {
         .typeState(state)
         .typeCity(city)
         .clickSubmit()
-
+        // проверки
         .checkResultsValue(firstName + " " + lastName)
         .checkResultsValue(userEmail)
         .checkResultsValue(gender)
