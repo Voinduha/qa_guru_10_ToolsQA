@@ -37,9 +37,20 @@ public class DemoQATestWithDsl extends TestBase {
                 .typeState(state)
                 .typeCity(city);
         registrationPage.calendar.setDate(11, "May", "2000");
+        registrationPage.clickSubmit();
 
-        registrationPage.clickSubmit()
-                .checkResultsValue(firstName + " " + lastName);
+                registrationPage.checkResultsValue(firstName)
+                .checkResultsValue(lastName)
+                .checkResultsValue(userEmail)
+                .checkResultsValue(gender)
+                .checkResultsValue(userNumber)
+                .checkResultsValue("11 May,2000")
+                .checkResultsValue(subject)
+                .checkResultsValue(hobbySport)
+                .checkResultsValue(uploadPicture)
+                .checkResultsValue(currentAddress)
+                .checkResultsValue(state)
+                .checkResultsValue(city);
     }
 }
 

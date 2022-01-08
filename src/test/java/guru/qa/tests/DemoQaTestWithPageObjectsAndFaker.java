@@ -40,6 +40,17 @@ public class DemoQaTestWithPageObjectsAndFaker extends TestBase {
         registrationPage.typeCity(city);
         registrationPage.clickSubmit();
         registrationPage.checkResultsValue(firstName + " " + lastName);
+        registrationPage.checkResultsValue(userEmail);
+        registrationPage.checkResultsValue(gender);
+        registrationPage.checkResultsValue(userNumber);
+        registrationPage.checkResultsValue("11 May, 2000");
+        registrationPage.checkResultsValue(subject);
+        registrationPage.checkResultsValue(hobbySport);
+        registrationPage.checkResultsValue(uploadPicture);
+        registrationPage.checkResultsValue(currentAddress);
+        registrationPage.checkResultsValue(state);
+        registrationPage.checkResultsValue(city);
+
     }
 }
 

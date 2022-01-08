@@ -92,7 +92,8 @@ public class RegistrationPage {
         return this;
     }
 
-    public void checkResultsValue(String firstName) {
-        resultsTable.shouldHave(text(firstName));
+    public RegistrationPage checkResultsValue(String value) {
+        resultsTable.shouldHave(text(value));
+        return this;
     }
 }
